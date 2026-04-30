@@ -1,0 +1,32 @@
+name: translation-mcp
+display_name: "Translation MCP"
+description: "Multi-language translation with Google Translate, DeepL, and local LLM. Text, batch, file, HTML, JSON, Markdown translation. Auto language detection."
+version: 1.0.0
+entryPoint: server.py
+runtime: python
+buildCommand: ""
+tools:
+  - name: list_languages
+    description: "List supported languages"
+  - name: detect_language
+    description: "Auto-detect language"
+  - name: translate_text
+    description: "Translate text to target language"
+  - name: translate_batch
+    description: "Batch translate multiple texts"
+  - name: translate_file
+    description: "Translate file (txt/md/json/csv)"
+  - name: translate_html
+    description: "Translate HTML preserving tags"
+  - name: translate_json
+    description: "Translate JSON values"
+  - name: translate_markdown
+    description: "Translate Markdown preserving format"
+  - name: compare_translations
+    description: "Compare multiple engine translations"
+  - name: transliterate
+    description: "Transliterate text to different script"
+transport:
+  type: http
+  port: 9020
+  url: https://www.mzse.com/translation-mcp/mcp
